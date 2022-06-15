@@ -1,6 +1,6 @@
 # mdh
 
-![npm version badge](https://img.shields.io/npm/v/@thomasfkjorna/mdh?color=%23cb0000&logo=npm)
+[![npm version badge](https://img.shields.io/npm/v/@thomasfkjorna/mdh?color=%23cb0000&logo=npm)](https://npmjs.com/package/@thomasfkjorna/mdh)
 
 small cli utility for converting multiple markdown files to one html document with support for gfm and math (katex).
 

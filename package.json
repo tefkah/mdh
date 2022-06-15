@@ -1,0 +1,27 @@
+{
+  "name": "mdh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "mdh": "index.js"
+  },
+  "repository": "https://github.com/thomasfkjorna/mdh",
+  "author": "Thomas F. K. Jorna",
+  "license": "GPLv3+",
+  "dependencies": {
+    "commander": "^9.3.0",
+    "rehype-document": "^6.0.1",
+    "rehype-katex": "^6.0.2",
+    "rehype-stringify": "^9.0.3",
+    "remark-frontmatter": "^4.0.1",
+    "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "unified": "^10.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  }
+}

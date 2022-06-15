@@ -10,17 +10,24 @@ import rehypeDocument from 'rehype-document';
 import { program } from 'commander';
 import { readFile, writeFile } from 'fs/promises';
 import { urlToHttpOptions } from 'url';
+import { join } from 'path';
 
-program.option('-o, --out <string>');
+program.option('-o, --out <string>', 'output path of the html file');
+program.option('-s, --style <string>', 'raw css to include');
+program.option('-c, --css <string>', 'link to css stylesheets');
 program.parse();
 
+const katex = await readFile(join(__dirname, 'katex.min.css'));
 const proc = unified()
   .use(remarkParse)
   .use(remarkGFM)
   .use(remarkMath)
   .use(remarkRehype)
   .use(rehypeKatex)
-  .use(rehypeDocument, { css: ['katex/styles/katex.css'] })
+  .use(rehypeDocument, {
+    style: [katex, program.opts().style],
+    css: program.opts().css,
+  })
   .use(rehypeStringify);
 
 const files = [];

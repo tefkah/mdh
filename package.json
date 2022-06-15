@@ -22,6 +22,7 @@
     "unified": "^10.1.2"
   },
   "devDependencies": {
+    "prettier": "^2.7.0",
     "typescript": "^4.7.3"
   }
 }
